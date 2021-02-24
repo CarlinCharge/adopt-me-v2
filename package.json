@@ -1,0 +1,24 @@
+{
+  "name": "adopt-me-v2",
+  "version": "1.0.0",
+  "description": "This is a repo tracking progress on \"Complete Intro to React v5\"",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\" --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlinCharge/adopt-me-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlinCharge/adopt-me-v2/issues"
+  },
+  "homepage": "https://github.com/CarlinCharge/adopt-me-v2#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
