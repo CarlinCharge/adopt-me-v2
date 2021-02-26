@@ -22,6 +22,7 @@
   "homepage": "https://github.com/CarlinCharge/adopt-me-v2#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
