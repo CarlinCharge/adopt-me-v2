@@ -1,0 +1,97 @@
+"use strict";
+
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+  var _react = _interopRequireDefault(require("react"));
+
+  var _reactDom = require("react-dom");
+
+  var _SearchParams = _interopRequireDefault(require("./SearchParams"));
+
+  var _router = require("@reach/router");
+
+  var _Details = _interopRequireDefault(require("./Details"));
+
+  var _jsxFileName = "/Users/carlconroy/Desktop/Code/adopt-me-v2/src/App.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  const App = () => {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 5
+      }
+    }, /*#__PURE__*/_react.default.createElement("header", {
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement(_router.Link, {
+      to: "/",
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11,
+        columnNumber: 9
+      }
+    }, /*#__PURE__*/_react.default.createElement("h1", {
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12,
+        columnNumber: 11
+      }
+    }, "Adopt Me"))), /*#__PURE__*/_react.default.createElement(_router.Router, {
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15,
+        columnNumber: 7
+      }
+    }, /*#__PURE__*/_react.default.createElement(_SearchParams.default, {
+      path: "/",
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_react.default.createElement(_Details.default, {
+      path: "/details/:id",
+      __self: void 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 9
+      }
+    })));
+  };
+
+  _c = App;
+  (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(App, {
+    __self: void 0,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 8
+    }
+  }), document.getElementById("root"));
+
+  var _c;
+
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,100 @@
+"use strict";
+
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(require("react"));
+
+  var _pet = _interopRequireDefault(require("@frontendmasters/pet"));
+
+  var _jsxFileName = "/Users/carlconroy/Desktop/Code/adopt-me-v2/src/Details.js";
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  class Details extends _react.default.Component {
+    constructor() {
+      super();
+      this.state = {
+        loading: true
+      };
+    }
+
+    componentDidMount() {
+      _pet.default.animal(this.props.id).then(({
+        animal
+      }) => {
+        this.setState({
+          name: animal.name,
+          animal: animal.type,
+          location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
+          description: animal.description,
+          media: animal.photos,
+          breed: animal.breeds.primary,
+          loading: false
+        });
+      }, console.error);
+    }
+
+    render() {
+      if (this.state.loading) {
+        return /*#__PURE__*/_react.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24,
+            columnNumber: 14
+          }
+        }, " Loading...");
+      }
+
+      const {
+        animal,
+        breed,
+        location,
+        description,
+        media,
+        name
+      } = this.state;
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "details",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_react.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 11
+        }
+      }, name)));
+    }
+
+  }
+
+  var _default = Details;
+  exports.default = _default;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

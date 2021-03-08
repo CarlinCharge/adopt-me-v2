@@ -6,19 +6,17 @@ import Details from "./Details";
 
 const App = () => {
   return (
-    <React.StrictMode>
-      <div>
-        <header>
-          <Link to="/">
-            <h1>Adopt Me</h1>
-          </Link>
-        </header>
-        <Router>
-          <SearchParams path="/" />
-          <Details path="/details/:id" />
-        </Router>
-      </div>
-    </React.StrictMode>
+    <div>
+      <header>
+        <Link to="/">
+          <h1>Adopt Me</h1>
+        </Link>
+      </header>
+      <Router>
+        <SearchParams path="/" />
+        <Details path="/details/:id" />
+      </Router>
+    </div>
   );
 };
 
